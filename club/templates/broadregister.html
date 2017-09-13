@@ -1,0 +1,138 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block title_block %}
+Register||Club20
+{% endblock %}
+{% block head_block %}
+<style media="screen">
+.link
+{
+    text-align: center;
+
+    font:normal 32pt Arial;
+    color:#FFFFFF;
+    font: bold 32px Helvetica, Arial, Sans-Serif;
+    text-shadow: 0px 0px #fe4902,
+                 0px 2px #fe4902,
+                 0px 0px #fe4902,
+                 0px 0px #fe4902,
+                 0px 1px #fe4902,
+                 0px 0px #fe4902;
+}
+.content
+{
+left:20%;
+  top: 45%;
+    opacity: 1;
+    position: absolute;
+    margin: auto;
+    transition: 0.5s;
+}
+.register{
+  opacity: 0;
+  position: absolute;
+  left: 30%;
+  top: 50%;
+}
+.box:hover .link
+{
+  transform: translate(0px, -30px);
+  transition : 0.2s;
+}
+.box:hover .register
+{
+opacity: 1;
+transform: scale(1.1);
+transition: 0.7s;
+}
+.box:hover #image
+{
+ transform: scale(1.1);
+ transition : .5s;
+ opacity: 0.8;
+}
+.box
+{
+    width: auto;
+    position: relative;
+    height: auto;
+    border-radius: 7%;
+}
+#image
+{
+    opacity: .9;
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: .5s;
+}
+
+.frame
+{
+        overflow: hidden;
+}
+
+</style>
+{% endblock %}
+{% block body_block %}
+<div class="navbar navbar-inverse navbar-fixed-top " id="menu">
+    <div class="container">
+       <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a  href="#"><img src="{% static "club/img/club.jpg" %}" alt="Brand" width="70" height="70" style="border-radius: 12%" id="brand"> </a>
+        </div>
+          <div class="navbar-collapse collapse move-me">
+            <ul class="nav navbar-nav navbar-right">
+              <li ><a href="{% url 'index' %}">HOME</a></li>
+              <li><a href="#upcm-sec">UPCOMING EVENTS</a></li>
+              <li><a href="#upcm-sec">JOIN TEAM</a></li>
+              <li><a href="#contact-sec">CONTACT</a></li>
+              <button type="button" class="btn btn-default" name="Register"  style="margin-top:3%;">Register</button>
+            </ul>
+           </div>
+      </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="jumbotron">
+    <div id="upcm-sec" style="border: 1px solid gray; margin-top:5%; border-radius:1%;">
+      <h2 style="background-color:white; margin-top:0; border-radius:10%;"><center>Upcoming Events</center></h2>
+        <div class="row">
+          {% for xyz in xyz %}
+          <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+          <div class="box frame">
+            <img src="{{xyz.poster.url}}" id="image" class="img-responsive">
+            <div class="content">
+              <div class="link">
+              <center>{{xyz.title}}</center>
+              </div>
+              <div class="register">
+                <center><button type="button" name="Register" class="btn btn-primary" ><a href="{{xyz.register}}" style="text-decoration:none; color:white;">Register</a></button></center>
+              </div>
+            </div>
+          </div>
+
+        </div>
+          {% endfor %}
+        </div>
+    </div>
+
+      <div class="row">
+
+        <div class="heading" style="background-color:white;">
+          <h2><center>Forum Registerations</center></h2>
+        </div>
+      </div>
+
+
+  </div>
+</div>
+
+
+
+{% endblock %}

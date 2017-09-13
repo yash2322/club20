@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!--Styling-->
+    <link href="{% static "club/css/bootstrap.css" %}" rel="stylesheet" />
+    <link href="{% static "club/css/font-awesome.min.css" %}"  rel="stylesheet" />
+    <link href="{% static "club/css/flexslider.css" %}" rel="stylesheet" />
+    <link href="{% static "club/css/style.css" %}"  rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'/>
+    <!--Styling-->
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <title>{% block title_block %}
+
+    {% endblock %}</title>
+    <style media="screen">
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+      .event-links:hover{
+        color:black;
+          text-decoration: none;
+          cursor:pointer;
+      }
+      .event-links{
+        text-decoration: none;
+      }
+    </style>
+    {% block head_block %}
+
+    {% endblock %}
+  </head>
+  <body onload="page_content()">
+
+    {% block body_block %}
+
+    {% endblock %}
+  </body>
+</html>

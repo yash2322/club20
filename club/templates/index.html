@@ -1,0 +1,851 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load widget_tweaks %}
+{% load bootstrap3 %}
+{% block title_block %}
+Education councelling portal
+{% endblock %}
+
+{% block body_block %}
+<div id="Loading_background" style="display:block;z-index:1;"><img id="imagexyz" src="{% static 'wallup-213250.jpg' %}"></img>
+<div id="Loading_bk"></div>
+</div>
+<div id="check" style="display:none;">
+<!--NAVBAR SECTION STARTS-->
+<div class="navbar navbar-inverse navbar-fixed-top " id="menu">
+    <div class="container">
+       <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+          </button>
+          <a  href="#"><img src="{% static "club/img/club.jpg" %}" alt="Brand" width="70" height="70" style="border-radius: 12%" id="brand"> </a>
+        </div>
+           <div class="navbar-collapse collapse move-me">
+               <ul class="nav navbar-nav navbar-right">
+                   <li ><a href="#home">HOME</a></li>
+                   <li><a href="#features-sec">ACTIVITIES</a></li>
+                   <li><a href="#faculty-sec">PANEL</a></li>
+                   <li><a href="#course-sec">EVENTS</a></li>
+                   <li><a href="#contact-sec">CONTACT</a></li>
+                   <button type="button" class="btn btn-default" name="Register" style="margin-top:3%;"><a href="{% url 'register' %}">Register</a></button>
+
+                </ul>
+           </div>
+      </div>
+   </div>
+<!--NAVBAR SECTION END-->
+
+<div class="home-sec" id="home" >
+    <div class="overlay">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-lg-12  col-md-12 col-sm-12">
+            <div class="flexslider set-flexi" id="main-section" >
+              <ul class="slides move-me">
+
+                <!-- Slider 01 -->
+                 <li>
+                    <h2>“Sports serve society by providing vivid examples of excellence.”</h2>
+                    <h3>– George F. Will</h3>
+                  </li>
+                  <!-- End Slider 01 -->
+
+                  <!-- Slider 02 -->
+                 <li>
+                    <h2>"It's not whether you get knocked down; it's whether you get up."</h2>
+                    <h3>— Vince Lombardi</h3>
+
+                 </li>
+                 <!-- End Slider 02 -->
+
+
+                 <!-- Slider 03 -->
+                 <li>
+                    <h2>“The principle is competing against yourself. It’s about self-improvement, about being better than you were the day before.”</h2>
+                    <h3>– Steve Young</h3>
+                  </li>
+                  <!-- End Slider 03 -->
+             </ul>
+         </div>
+       </div>
+     </div>
+   </div>
+</div>
+</div>
+
+<div  class="tag-line" >
+     <div class="container">
+       <div class="row  text-center" >
+           <div class="col-lg-12  col-md-12 col-sm-12">
+
+    <h2 data-scroll-reveal="enter from the bottom after 0.1s" ><i class="fa fa-circle-o-notch"></i> WELCOME TO CLUB 20 <i class="fa fa-circle-o-notch"></i> </h2>
+               </div>
+           </div>
+         </div>
+
+</div>
+<!--HOME SECTION TAG LINE END-->
+<form method="post">
+  {% csrf_token %}
+  <div id="sidebar"><p id="FEEDBK">FEEDBACK</p><div id="slidedown_baar">
+     {% render_field form1.feedType class+="feed" %}
+
+     {% render_field form1.firstname class+="feed" placeholder="First Name"%}
+
+     {% render_field form1.lastname class+="feed" placeholder="Last Name"%}
+     {% render_field form1.message class+="suggestion_box" rows="20" cols="20" placeholder="Hello World"%}
+     {% csrf_token %}
+     <input class="feed1" id="submit" type="submit" value="Submit">
+  </div></div>
+</form>
+
+
+
+         <div id="features-sec" class="container set-pad" >
+             <div class="row text-center" id="slide1">
+                 <div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
+                     <h1 data-scroll-reveal="enter from the bottom after 0.2s"  class="header-line"> ACTIVITIES</h1>
+                     <p data-scroll-reveal="enter from the bottom after 0.3s" >
+                        The expert in anything was once a beginner." you reacg great height when u start as a beginner and work hard.
+                        it would be more suitable if you could have the choices available and u can chose the one in which you are interested.
+                    </p>
+                 </div>
+                 <div id="arrow" style="width:10%;height:10%;position:absolute;margin-left:70%;margin-top:4%;float:right;">
+                                    <img src="{% static 'arrow.png' %}" id="arrow_image" style="width:3%;height:6%;position:relative;position:fixed;margin-top:1.2%;z-index:2;"/></div>
+             </div>
+
+<!--HEADER LINE END-->
+
+
+           <div class="row" >
+
+
+                 <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.4s">
+                     <div class="about-div">
+                     <i class="fa fa-paper-plane-o fa-4x icon-round-border" ></i>
+                   <h3 >Quality SPORTS</h3>
+                 <hr />
+                       <hr/>
+                   <p>
+                      Online counseling is the core feature which helps a student identify the career path he can follow to achieve his ambition in life.
+                      We have attached a lot of importance to this feature and the facilities provided here include the development of career graph for the
+                      student visiting our site. Online chat with the counselor, Developing personality including mock interviews, aptitude tests to evaluate yourself.
+
+
+                   </p>
+               <a href="#" class="btn btn-info btn-set">ASK THE EXPERT</a>
+                </div>
+                   </div>
+
+                   <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.5s">
+                     <div class="about-div">
+                     <i class="fa fa-bolt fa-4x icon-round-border" ></i>
+                   <h3 >DIFFERENT APPROACH</h3>
+                 <hr />
+                       <hr />
+                   <p >To excel in educational field , systematic approach is very important.
+                      your approach towards things and objectives should be vivid so that it
+                      can be reflected on its own and can help in the personality development.
+                      It doesnt matter which path you choose what matters is how you set your footprints there.
+                      and this can be achieved if you follow things systematically.
+
+                   </p>
+               <a href="#" class="btn btn-info btn-set">ASK THE EXPERT</a>
+                </div>
+                   </div>
+                 <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.6s">
+                     <div class="about-div">
+                     <i class="fa fa-magic fa-4x icon-round-border" ></i>
+                   <h3 >ASK THE PANEL</h3>
+                 <hr />
+                       <hr />
+                   <p >
+                       you can even have interactive sessions where u can learn and improve your intellectual knowledge.
+                        our website will be having various skillful videos from which you can motivate yourself and take your decision as per to opt
+                        for which particular field.
+                    </p>
+               <a href="#" class="btn btn-info btn-set"  >ASK THE EXPERT</a>
+                </div>
+                   </div>
+
+
+               </div>
+
+             </div>
+
+
+<!-- FEATURES SECTION END-->
+
+
+    <div id="faculty-sec" >
+    <div class="container set-pad">
+             <div class="row text-center">
+                 <div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
+                     <h1 data-scroll-reveal="enter from the bottom after 0.1s" class="header-line">OUR CORE PANEL</h1>
+
+                 </div>
+
+             </div>
+<!--/.HEADER LINE END-->
+
+
+
+           <div class="row" >
+
+
+                 <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.4s">
+                     <div class="faculty-div">
+                     <img src="{% static "club/img/CEO" %}"  width = "300" height = "210" class="img-rounded" />
+                   <h3>NIKEY KUSHWAH</h3>
+                 <hr />
+                         <h4>Chief-Executive Officer</h4>
+
+                </div>
+                   </div>
+                 <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.5s">
+                     <div class="faculty-div">
+                     <img src="{% static "club/img/rohit.jpg" %}" width = "230" height = "210" class="img-rounded" />
+                   <h3 >ROHIT CHITLANGIA</h3>
+                 <hr />
+                         <h4>Treasurer</h4>
+
+                </div>
+                   </div>
+               <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.6s">
+                     <div class="faculty-div">
+                     <img src="{% static "club/img/rishab.jpg" %}" width = "230" height = "210" class="img-rounded" />
+                   <h3 >RISHABH MALVIYA</h3>
+                 <hr />
+                         <h4>Core-Member</h4>
+
+                </div>
+                   </div>
+
+               </div>
+
+           <div class="row" >
+
+
+                 <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.4s">
+                     <div class="faculty-div">
+                     <img src="{% static "club/img/anubhav.jpg" %}" width = "300" height = "210" class="img-rounded" />
+                   <h3 >ANUBHAV TIWARI</h3>
+                 <hr />
+                         <h4>Technical Head</h4>
+
+                </div>
+                   </div>
+                 <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.5s">
+                     <div class="faculty-div">
+                     <img src="{% static "club/img/vivek.jpg" %}"  width = "230" height = "210" class="img-rounded" />
+                   <h3>VIVEK YADAV</h3>
+                 <hr />
+                         <h4>Resource Head</h4>
+
+                </div>
+                   </div>
+               <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.6s">
+                     <div class="faculty-div">
+                     <img src="{% static "club/img/brijesh.jpg" %}" width = "230" height = "210" class="img-rounded" />
+                   <h3 >BRIJESH AGARWAL</h3>
+                 <hr />
+                         <h4>Event Manager</h4>
+
+                </div>
+                   </div>
+
+                   <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.6s">
+                     <div class="faculty-div">
+                     <img "{% static "club/img/rohan.JPG" %}" width = "300" height = "210" class="img-rounded" />
+                   <h3 >ROHAN DUBEY</h3>
+                 <hr />
+                         <h4>CORE MEMBER</h4>
+
+                </div>
+                   </div>
+
+                   <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.6s">
+                     <div class="faculty-div">
+                     <img "{% static "club/img/irfan.jpg" %}"  width = "230" height = "210" class="img-rounded" />
+                   <h3 >IRFAN</h3>
+                 <hr />
+                         <h4>CORE MEMBER</h4>
+
+                </div>
+                   </div>
+
+                   <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.6s">
+                     <div class="faculty-div">
+                     <img "{% static "club/img/suryanshi.jpg" %}" width = "230" height = "210" class="img-rounded" />
+                   <h3 >SURYANSHI SHRIVASTAVA</h3>
+                 <hr />
+                         <h4>CORE MEMBER</h4>
+
+                </div>
+                   </div>
+
+               </div>
+             </div>
+        </div>
+<!-- FACULTY SECTION END-->
+
+
+<!-- Events backend part-->
+
+      <div id="course-sec" class="container set-pad">
+             <div class="row text-center">
+                 <div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
+                     <h1 data-scroll-reveal="enter from the bottom after 0.1s" class="header-line">OUR EVENTS </h1>
+                     <p data-scroll-reveal="enter from the bottom after 0.3s">
+
+                         </p>
+                 </div>
+
+             </div>
+
+<!--/.HEADER LINE END-->
+
+
+           <div class="row set-row-pad" >
+           <div class="col-lg-6 col-md-6 col-sm-6 " data-scroll-reveal="enter from the bottom after 0.4s" >
+                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    {% for xyz in xyz  %}
+    <li data-target="#myCarousel" data-slide-to="{{forloop.counter0}}" class="{% if forloop.counter == 1 %} active {% endif %}"></li>
+    {% endfor %}
+  </ol>
+
+  <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        {% for xyz in xyz  %}
+          <div class="item {% if forloop.counter == 1 %} active {% endif %}">
+          <img src="{{xyz.poster.url}}" alt="{{xyz.title}}" class="img-responsive">
+          </div>
+        {% endfor %}
+
+    </div>
+  </div>
+</div>
+
+               <div class="col-lg-4 col-md-4 col-sm-4 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
+                   <div class="panel-group" id="accordion">
+                        <div class="panel panel-default" data-scroll-reveal="enter from the bottom after 0.5s">
+                            <div class="panel-heading" >
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="collapsed">
+                                      <strong><span class="counter" data-count="{{xyz.count}}">0</span>+</strong>
+                                 UPCOMING EVENTS
+                                    </a>
+                                </h4>
+                            </div>
+
+                            <div id="collapse1" class="panel-collapse collapse" style="height: 0px;">
+                                <div class="panel-body">
+                                    <p><ul>
+                                      {% for xyz in xyz %}
+                                      <li><a class="event-links" data-toggle="modal" data-target="#{{xyz.slug}}">{{xyz.title}}</a></li>
+                                      <div class="modal fade" id="{{xyz.slug}}" role="dialog">
+                                        <div class="modal-dialog">
+
+                                          <!-- Modal content-->
+                                          <div class="modal-content">
+                                            <div class="modal-header">
+                                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                              <h4 class="modal-title">{{xyz.title}}</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                              <p>{{xyz.details}}</p>
+                                              <br>
+                                              <p><strong>Venue: </strong>{{xyz.Venue}}</p>
+                                              <br>
+                                              <p><strong>Date: </strong>{{xyz.date}}</p>
+                                              <br>
+                                              <p><strong>Time: </strong>{{xyz.time}}</p>
+                                              <br>
+                                              <center><button type="button" class="btn btn-default btn-primary" name="Register"><a style="text-decoration:none; color:white; "href="{{xyz.register}}">Register</a></button></center>
+                                            </div>
+                                            <div class="modal-footer">
+                                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            </div>
+                                          </div>
+
+                                        </div>
+                                      </div>
+                                      {% endfor %}
+
+
+
+                                        </ul>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default" data-scroll-reveal="enter from the bottom after 0.7s">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2" class="collapsed">
+                                        <strong><span class="counter" data-count="{{abc.count}}">0</span>+</strong> SUCCESSFUL EVENTS
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapse2" class="panel-collapse collapse" style="height: 0px;">
+                                <div class="panel-body">
+                                    <p>
+                                        <ul>
+                                          {% for abc in abc %}
+                                          <li><a class="event-links" data-toggle="modal" data-target="#{{abc.slug}}">{{abc.title}}</a></li>
+                                          <div class="modal fade" id="{{abc.slug}}" role="dialog">
+                                            <div class="modal-dialog">
+
+                                              <!-- Modal content-->
+                                              <div class="modal-content">
+                                                <div class="modal-header">
+                                                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                  <h4 class="modal-title">{{abc.title}}</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                  <p>{{abc.details}}</p>
+                                                  <br>
+                                                  <p><strong>Date: </strong>{{abc.date}}</p>
+                                                  <br>
+                                                  <div class="row">
+
+                                                      <h2>Some beautiful moments</h2>
+                                                      {% for abcimg in abc.SuccessfullEvents.all %}
+                                                      <div class="col-lg-6 col-md-12 col-xs-12 col-sm-12">
+                                                        <img src="{{abcimg.snap.url}}" alt="{{abc.title}}" class="img-responsive">
+                                                        </div>
+                                                      {% endfor %}
+
+                                                  </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                </div>
+                                              </div>
+
+                                            </div>
+                                          </div>
+                                          {% endfor %}
+                                        </ul>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                   <div class="alert alert-info" data-scroll-reveal >
+                       <span style="font-size:40px;">
+                            <strong><span class="counter" data-count="40">0</span>+</strong>
+                           <hr />
+                           Dedicated members
+                       </span>
+                   </div>
+           </div>
+
+
+
+
+             </div>
+
+<!-- COURSES SECTION END-->
+
+<!--Event backend -->
+
+    <div id="contact-sec">
+           <div class="overlay">
+               <div class="container set-pad">
+                  <div class="row text-center">
+                     <div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
+                       <h1 data-scroll-reveal="enter from the bottom after 0.1s" class="header-line" >CONTACT US  </h1>
+                       <p data-scroll-reveal="enter from the bottom after 0.3s">
+                        CONTACT us details !!
+                         </p>
+                    </div>
+
+                 </div>
+
+<!--/.HEADER LINE END-->
+
+           <div class="row set-row-pad"  data-scroll-reveal="enter from the bottom after 0.5s" >
+                 <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
+                    <form method="post">
+                      <div class="form-group">
+                        {% csrf_token %}
+                        {% bootstrap_form form %}
+                        <input type="submit" class="btn btn-default" value="Submit">
+                      </div>
+                    </form>
+                </div>
+
+
+               </div>
+                </div>
+          </div>
+       </div>
+
+<!-- CONTACT FORM ENDS -->
+
+
+
+ <!--LOCATION DETAILS -->
+
+     <div class="container">
+             <div class="row set-row-pad"  >
+    <div class="col-lg-2 col-md-2 col-sm-2   col-lg-offset-1 col-md-offset-1 col-sm-offset-1 " data-scroll-reveal="enter from the bottom after 0.4s">
+
+                    <h2 ><strong>Our Location </strong></h2>
+        <hr />
+                    <div >
+                        <h3><strong >LOVELY PROFESSIONAL UNIVERSITY</strong></h3>
+                        <h4>jalandar-Delhi G.T road</h4>
+                        <h4>Phagwara,Punjab (India).</h4>
+                        <h4><strong>Call:</strong>  01824404455</h4>
+                        <h4><strong>Email: </strong>addmission@lpu.co.in</h4>
+                        <h4><strong>Website: </strong> www.lpu.in</h4>
+                    </div>
+
+
+                </div>
+                 <div class="col-lg-2 col-md-2 col-sm-2   col-lg-offset-1 col-md-offset-1 col-sm-offset-1" data-scroll-reveal="enter from the bottom after 0.4s">
+
+<!-- LOCATION DETAILS CLOSES -->
+
+
+
+
+
+<!-- SOCIAL CONNECTIVITY-->
+                    <h2 ><strong>Social Connectivity </strong></h2>
+        <hr />
+                    <div >
+                    <a href="https://www.facebook.com">  <img src="{% static 'club/img/Social/facebook.png' %}" alt="facebook" width="50" height="50" /> </a>
+                     <a href="https://www/googleplus.com"> <img src="{% static 'club/img/Social/google-plus.png' %}" alt="google-plus" width="50" height="50"/></a>
+                     <a href="https://www.twitter.com"> <img src="{% static 'club/img/Social/twitter.png' %}"  alt="twitter"width="50" height="50"  /></a>
+                    </div>
+                    </div>
+
+<!-- SOCIAL CONNECTIVITY CLOSE-->
+
+
+
+<!-- MAP APIS -->
+<h2> <strong><center>&nbsp &nbsp&nbsp&nbspLOCATION</center></strong> </h2>
+
+&nbsp&nbsp&nbsp&nbsp<hr/>
+                <div class="col-lg-2 col-md-2 col-sm-2  col-lg-offset-1 col-md-offset-1 col-sm-offset-1" data-scroll-reveal="enter from the bottom after 0.4s">
+          <section id="location" class="contact-section">
+        <div class="container" item-width="500" item-height="500">
+            <div class="row">
+                <div class="col-lg-12">
+                  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript">
+if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function (p) {
+        var LatLng = new google.maps.LatLng(p.coords.latitude, p.coords.longitude);
+        var mapOptions = {
+            center: LatLng,
+            zoom: 13,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("dvMap"), mapOptions);
+        var marker = new google.maps.Marker({
+            position: LatLng,
+            map: map,
+            title: "<div style = 'height:60px;width:200px'><b>Your location:</b><br />Latitude: " + p.coords.latitude + "<br />Longitude: " + p.coords.longitude
+        });
+        google.maps.event.addListener(marker, "click", function (e) {
+            var infoWindow = new google.maps.InfoWindow();
+            infoWindow.setContent(marker.title);
+            infoWindow.open(map, marker);
+        });
+    });
+} else {
+    alert('Geo Location feature is not supported in this browser.');
+}
+</script>
+<div id="dvMap" style="width:500px; height: 300px" class="img-responsive thumbnail">
+</div>
+    </section>
+
+
+                </div>
+                 </div>
+
+<!--MAP API CLOSES -->
+
+
+     <!-- CONTACT SECTION END-->
+
+
+
+    <div id="footer">
+          &copy 2017 www.lpu.com | All Rights Reserved |
+    </div>
+     <!-- FOOTER SECTION END-->
+</div>
+    <!--  Jquery Core Script -->
+    </script>
+    <script>
+    $(".set-row-pad").mouseenter(function(){
+    $('.counter').each(function() {
+       var $this = $(this),
+       countTo = $this.attr('data-count');
+
+     $({ countNum: $this.text()}).animate({
+       countNum: countTo
+       },
+
+       {
+         duration: 3000,
+         easing:'linear',
+         step: function() {
+           $this.text(Math.floor(this.countNum));
+         },
+         complete: function() {
+           $this.text(this.countNum);
+           //alert('finished');
+         }
+       });
+     });
+});
+    </script>
+    <script src="{% static "club/js/jquery-1.10.2.js" %}"></script>
+    <script src="{% static "club/js/jquery-3.1.1.js" %}"></script>
+    <script src="{% static "club/js/jquery-3.1.1.min.js" %}"></script>
+    <!--  Core Bootstrap Script -->
+
+    <script src="{% static "club/js/bootstrap.min.js" %}"></script>
+    <!--  Flexslider Scripts -->
+    <script src="{% static "club/js/jquery.flexslider.js" %}"></script>
+     <!--  Scrolling Reveal Script -->
+    <script src="{% static "club/js/scrollReveal.js" %}"></script>
+    <!--  Scroll Scripts -->
+    <script src="{% static "club/js/jquery.easing.min.js" %}"></script>
+    <!--  Custom Scripts -->
+    <script src="{% static "club/js/custom.js" %}"></script>
+<script>
+$(document).ready(function() {
+  $("#arrow_image").hide();
+$(window).scroll(function() {
+    if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+        $('#arrow_image').fadeIn(200);    // Fade in the arrow
+    } else {
+        $('#arrow_image').fadeOut(200);   // Else fade out the arrow
+    }
+});
+$('#arrow_image').click(function() {      // When arrow is clicked
+    $('body,html').animate({
+        scrollTop : 0                       // Scroll to top of body
+    }, 500);
+});
+});
+</script>
+<style>
+#Loading_bk
+{
+
+z-index: 2;
+background-color: grey
+	border:18px solid black;
+	border-radius:80%;
+	border-top: 18px solid black;
+	border-bottom: 18px solid black;
+	width:50px;
+	height: 50px;
+	-webkit-animation-name:uchal_kuud;
+	-webkit-animation: uchal_kuud 1s linear infinite;
+	animation: uchal_kuud 1s linear infinite;
+	position: absolute;
+	left: 49%;
+	top: 40%;
+	box-shadow: 4px 2px 2px grey;
+}
+@-webkit-keyframes uchal_kuud {
+  0% { margin-top :0%; opacity:1 }
+  73% { margin-top: 3%;opacity: 0.6 }
+  100% { margin-top:0%; opacity:1 }
+}
+
+@keyframes uchal_kuud {
+  0% { margin-top :0%; opacity:1 }
+  73% { margin-top: 3%;opacity: 0.6 }
+  100% { margin-top:0%; opacity:1 }
+}
+#Loading_background
+{
+	display: block;
+
+margin-top: 0px;
+
+	background-size: 100%;
+
+width: 100%;
+height: 80%;
+}
+#imagexyz
+{
+	border: 8px solid black;
+	opacity: 0.8;
+	position: absolute;
+	height: 97.8%;
+	width: 99.9%;
+
+}
+
+</style>
+<style>
+button a:hover{
+  text-decoration: none;
+}
+#sidebar
+	{
+	box-shadow: 3px 3px 3px gray;
+	position: absolute;
+  position: fixed;
+	width:280px;
+	height: 128px;
+	margin-left: -240px;
+	background-color: 	white;
+	border:3px solid black;
+  margin-top: -25%;
+  z-index: 5;
+}
+.valve{
+			     color:black;
+						font-size: 20px;
+			font-family: Times New Roman,Arial;
+
+		}
+
+#FEEDBK{
+	margin-top: 80px;
+	margin-left: 240px;
+	font-family: sans-serif;
+	font-size: 18px;
+
+	color: black;
+	text-shadow: 1px 1px 1px grey;
+	-webkit-transform: rotate(270deg);
+}
+#slidedown_baar{
+	margin-left: -10px;
+	border-right:3px solid black;
+	border-bottom: 3px solid black;
+	margin-top: -120px;
+	width: 240px;
+	height: 400px;
+	background-color: #BDB76B;
+	box-shadow: 3px 3px 3px gray;
+}
+.feed
+{
+text-align: left;
+	color: black;
+	font-size: 15px;
+	box-shadow: 3px 3px 3px black;
+	background-color: white;
+	width: 80%;
+	height: 27px;
+	border-radius: 8px;
+	margin-top: 40px;
+	padding-left: 6px;
+	margin-left: 30px;
+outline: none;
+border: 2px solid black;
+
+}
+.feed1
+{
+  text-align: center;
+	color: black;
+  font-weight: bold;
+	font-size: 15px;
+	background-color: white;
+	width: auto;
+  border-radius: 10px;
+	height: 27px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+	padding-top: 0;
+  padding-left: 8px;
+  padding-right: 8px;
+	margin-left: 80px;
+  box-shadow: 3px 3px 3px black;
+  border: 2px solid black;
+  outline: none;
+
+
+}
+.suggestion_box
+{
+	text-align: left;
+	color: black;
+	border: 2px solid black;
+	font-size: 16px;
+	box-shadow: 3px 3px 3px black;
+	background-color: white;
+	width: 80%;
+	height: 62px;
+	border-radius: 6px;
+	margin-top: 40px;
+	padding-left: 6px;
+	margin-left: 30px;
+outline: none;
+}
+</style>
+<script>
+var page_load;
+var xyz;
+function page_content()
+{
+
+  document.getElementById("check").style.display = "none";
+    page_load=setTimeout(Page,2000);
+}
+
+function Page()
+{
+  $("#Loading_bk").fadeOut(1000);
+  $("#Loading_background").fadeOut(1010);
+
+
+  $("#check").fadeIn(2000);
+  xyz=setTimeout(page2,1000);
+
+
+}
+function page2()
+{
+  document.getElementById("Loading_bk").style.display = "none";
+  document.getElementById("Loading_background").style.display = "none";
+
+  document.getElementById("check").style.display = "block";
+}
+
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+		$("#slidedown_baar").hide();
+	 $("#sidebar").mouseenter(function(){
+	$("#sidebar").show();
+ 	$("#sidebar").animate({left: "+=230px"},350);
+$("#slidedown_baar").slideDown();
+
+ });
+ $("#sidebar").mouseleave(function(){
+ 	$("#sidebar").animate({left: "-=230px"},80);
+ $("#slidedown_baar").slideUp();
+ });
+ $("#side").mouseenter(function(){
+ 	$("#slidedown_baar").slideDown();
+ });
+});
+</script>
+</body>
+</html>
+
+{% endblock %}
